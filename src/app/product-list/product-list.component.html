@@ -2,8 +2,9 @@
 
 <div *ngFor="let product of products">
   <h3>
-    <a [title]="product.name + 'details'">
-      {{ product.name}}
+    <a [title]="product.name + 'details'"
+       [routerLink]="['/products', product.id]">
+      {{ product.name }}
     </a>
     <span>{{ product.price | currency }}</span>
   </h3>
@@ -12,7 +13,7 @@
   <div>
   <button type="button" (click)="share()">Share</button>
   </div>
-  
+
 </div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.

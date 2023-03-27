@@ -12,14 +12,17 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    // 新增路由規則
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent},
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     ProductListComponent,
+    // ProductAlertsComponent,
     ProductDetailsComponent
   ],
   bootstrap: [
