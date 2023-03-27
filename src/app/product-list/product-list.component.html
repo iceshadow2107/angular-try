@@ -5,9 +5,15 @@
     <a [title]="product.name + 'details'">
       {{ product.name}}
     </a>
+    <span>{{ product.price | currency }}</span>
   </h3>
-</div>
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
 
+  <div>
+  <button type="button" (click)="share()">Share</button>
+  </div>
+  
+</div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
